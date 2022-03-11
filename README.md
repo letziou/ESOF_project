@@ -4,10 +4,10 @@
 PowerCoders
 
 ## Members
-Diogo Pinheiro Almeida - 202006059
-Rafael Nuno Grilo Morgado - 201506449
-Jose Manuel Henriques Valente Marques de Sousa - 202006141
-Rúben Lourinha Monteiro - 202006478
+Diogo Pinheiro Almeida - 202006059\n
+Rafael Nuno Grilo Morgado - 201506449\n
+Jose Manuel Henriques Valente Marques de Sousa - 202006141\n
+Rúben Lourinha Monteiro - 202006478\n
 
 # Product Name
 NOTS
