@@ -13,13 +13,19 @@ Rúben Lourinha Monteiro - 202006478<br>
 NOTS
 
 ## Vision Stament
-O típico estudante universitário é bombardeado com imensa informação ao longo do semestre. É completamente normal que, por esquecimento, haja a falta de comparência em algumas aulas.
-O sistema de notificações tem em visa prevenir precisamente isso, permitindo a configuração de lembretes sonoros associados ao horário de aulas escolhidas pelo estudante.
+During the semester, students are overwhelmed with innumerable responsibilities, as such,
+memorizing their timetables becomes very tiresome. We are developing an application that
+allows them to set up several notifications in accordance with their timetable needs.
+
 
 ## Main Features
- - Sistema de notificações - Receber notificações antes de cada aula T/TP com a sala onde esta vai decorrer.
- - Costumização de notificações - O user pode alterar quanto tempo antes das aulas recebe as notificações, pode tambem alterar para quais é que recebe as ditas notificações e tambem que tipo de notificação recebe, banner, banner com som, alterar o som do ping, etc
+- Notification system – Receive a notification before every T/TP class with its classroom.
+- Notification customization – The user decides how long before classes to receive the notifications, he can also decide for which classes to receive said notification and its type, banner, banner with sound, additionally he can also change the sound alert.
+
+
+## Extra features
+- Map of FEUP - On the notification there will be a map of FEUP with the classes room highlighted 
 
 ## Required API's
-- API da UNI ou Sigarra
-- Timetable dos estudates
+- UNI API or Sigarra
+- Students Timetables
