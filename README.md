@@ -22,3 +22,4 @@ O sistema de notificações tem em visa prevenir precisamente isso, permitindo a
 
 ## Required API's
 - API da UNI ou Sigarra
+- Timetable dos estudates
