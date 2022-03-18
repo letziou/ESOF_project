@@ -14,7 +14,7 @@ NOTS
 
 ## Vision Stament
 During the semester, students are overwhelmed with innumerable responsibilities, as such,
-memorizing their timetables becomes very tiresome. We are developing an application that
+memorizing their timetables becomes very tiresome, as such, we are developing an application that
 allows them to set up several notifications in accordance with their timetable needs.
 
 
