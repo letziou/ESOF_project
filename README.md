@@ -33,6 +33,6 @@ Thank you for your time.
 ### Members:
 
 Diogo Pinheiro Almeida - 202006059<br>
-Rafael Nuno Grilo Morgado - 201506449<br>
 Jose Manuel Henriques Valente Marques de Sousa - 202006141<br>
+Rafael Nuno Grilo Morgado - 201506449<br>
 Rúben Lourinha Monteiro - 202006478<br>
