@@ -1,31 +1,38 @@
 # 2LEIC13T1
 
-# Team name
-PowerCoders
+NOTS development report.
 
-## Members
+Welcome to the documentation page of NOTS.
+
+Here you can find the details of all aspects of the module we are developing for the UNI app, from a high-level vision to the low-level implementation, also a sort of Software report, organized by discipline as RUP.
+
+* Business modeling 
+  * [Product Vision](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/ProductVision.md)
+  * [Elevator Pitch]
+* [Requirements](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/requirements.md)
+  * [Use Case Model](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/requirements.md#Use-case-model)
+  * [User stories](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/requirements.md#User-stories)
+  * [Domain model](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/requirements.md#Domain-model)
+* [Architecture and Design]
+  * [Logical architecture]
+  * [Physical architecture]
+  * [Prototype]
+* [Implementation]
+* [Test]
+* [Configuration and change management]
+* [Project management]
+
+So far, contributions are exclusively made by the initial team, but we hope to open them to the community, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
+
+Please contact us! 
+
+Thank you for your time.
+
+---
+
+### Members:
+
 Diogo Pinheiro Almeida - 202006059<br>
 Rafael Nuno Grilo Morgado - 201506449<br>
 Jose Manuel Henriques Valente Marques de Sousa - 202006141<br>
 Rúben Lourinha Monteiro - 202006478<br>
-
-# Product Name
-NOTS
-
-## Vision Stament
-During the semester, students are overwhelmed with innumerable responsibilities, as such,
-memorizing their timetables becomes very tiresome, as such, we are developing an application that
-allows them to set up several notifications in accordance with their timetable needs.
-
-
-## Main Features
-- Notification system – Receive a notification before every T/TP class with its classroom.
-- Notification customization – The user decides how long before classes to receive the notifications, he can also decide for which classes to receive said notification and its type, banner, banner with sound, additionally he can also change the sound alert.
-
-
-## Extra features
-- Map of FEUP - On the notification there will be a map of FEUP with the classes room highlighted 
-
-## Required API's
-- UNI API or Sigarra
-- Students Timetables
