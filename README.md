@@ -9,7 +9,7 @@ Here you can find the details of all aspects of the module we are developing for
 * Business modeling 
   * [Product Vision](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/ProductVision.md)
   * [Elevator Pitch]
-* [Requirements](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/requirements.md)
+* [Requirements](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md)
   * [Use Case Model](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Use-case-model)
   * [User stories](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#User-stories)
   * [Domain model](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Domain-model)
