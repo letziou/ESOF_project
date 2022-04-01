@@ -52,7 +52,7 @@ Description for each use case:
 | *Preconditions* | - The student has UNI app installed. <br> - The student is enrolled in FEUP. <br> - The student is enrolled in one or more classes. <br> - The student has at least one notification set up on the UNI app. |
 | *Postconditions* | - The student receives his notifications according to the changes he made. |
 | *Normal flow* | 1. The student accesses the UNI app and selects the notifications option. <br> 2. The app shows the list of classes the student is enrolled in and which have the notifications on. <br> 3. The student selects the option tab on the notifications menu <br> 4. The student chooses how much time ahead to receive the notification. <br> 5. The student confirms the changes by selecting the apply button. |
-| *Alternative flows and exceptions* | Default Set Up - If the student doesn't modify the time, the notification will be set with the default time. <br> Cancel Buttib - If in step 5 the students selects the cancel button the notifications will be set to, either the previous time set or if none exists to the default time. |
+| *Alternative flows and exceptions* | Default Set Up - If the student doesn't modify the time, the notification will be set with the default time. <br> Cancel Button - If in step 5 the students selects the cancel button the notifications will be set to, either the previous time set or if none exists to the default time. |
 
 <br><br>
 
@@ -84,5 +84,5 @@ Description for each use case:
 ### Domain model
 
  <p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/Domain%20Model%20white.png">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/Domain%20Model%20white%202.png">
  </p>
