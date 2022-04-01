@@ -40,7 +40,7 @@ Description for each use case:
 | *Preconditions* | - The student has UNI app installed. <br> - The student is enrolled in FEUP. <br> - The student is enrolled in one or more classes. <br> - The student has at least one notification set up on the UNI app. |
 | *Postconditions* | - The student no longer receives the notification. |
 | *Normal flow* | 1. The student accesses the UNI app and selects the notifications option. <br> 2. The app shows the list of classes the student is enrolled in and which have the notifications on. <br> 3. The student can remove the notification by unchecking the check box <br> 4. After choosing the classes to stop receiving a notification from, the Student confirms by selecting an apply button. |
-| *Alternative flows and exceptions* | - If in step 4 of the normal flow the Student chooses the cancel button the app returns to the notification menu without changes. |
+| *Alternative flows and exceptions* | Cancel Button - If in step 4 of the normal flow the Student chooses the cancel button the app returns to the notification menu without changes. |
 
 <br><br>
 
@@ -52,7 +52,7 @@ Description for each use case:
 | *Preconditions* | - The student has UNI app installed. <br> - The student is enrolled in FEUP. <br> - The student is enrolled in one or more classes. <br> - The student has at least one notification set up on the UNI app. |
 | *Postconditions* | - The student receives his notifications according to the changes he made. |
 | *Normal flow* | 1. The student accesses the UNI app and selects the notifications option. <br> 2. The app shows the list of classes the student is enrolled in and which have the notifications on. <br> 3. The student selects the option tab on the notifications menu <br> 4. The student chooses how much time ahead to receive the notification. <br> 5. The student confirms the changes by selecting the apply button. |
-| *Alternative flows and exceptions* | - If the student doesn't modify the time, the notification will be set with the default time. <br> - If in step 5 the students selects the cancel button the notifications will be set to, either the previous time set or if none exists to the default time. |
+| *Alternative flows and exceptions* | Default Set Up - If the student doesn't modify the time, the notification will be set with the default time. <br> Cancel Buttib - If in step 5 the students selects the cancel button the notifications will be set to, either the previous time set or if none exists to the default time. |
 
 <br><br>
 
@@ -64,7 +64,7 @@ Description for each use case:
 | *Preconditions* | - The student has UNI app installed. <br> - The student is enrolled in FEUP. <br> - The student is enrolled in one or more classes. <br> - The student has at least one notification set up on the UNI app. |
 | *Postconditions* | - The student receives his notifications according to the changes he made. |
 | *Normal flow* | 1. The student accesses the UNI app and selects the notifications option. <br> 2. The app shows the list of classes the student is enrolled in and which have the notifications on. <br> 3. The student selects the option tab on the notifications menu <br> 4. The student can choose if a notification can make a sound or not. <br> 5. The student confirms the changes by selecting the apply button. |
-| *Alternative flows and exceptions* | - If the student doesn't modify the sound option, the notification will be set with the default to on. <br> - If in step 5 the students selects the cancel button the notifications will be set to the previous sound option or if none exists to the default option. |
+| *Alternative flows and exceptions* | Default Set Up- If the student doesn't modify the sound option, the notification will be set with the default to on. <br> Cancel Button - If in step 5 the students selects the cancel button the notifications will be set to the previous sound option or if none exists to the default option. |
 
 <br><br>
 
@@ -76,7 +76,7 @@ Description for each use case:
 | *Preconditions* | - The student has UNI app installed. <br> - The student is enrolled in FEUP. <br> - The student is enrolled in one or more classes. <br> - The student has at least one notification set up on the UNI app. |
 | *Postconditions* | - The student receives his notifications according to the changes he made. |
 | *Normal flow* | 1. The student accesses the UNI app and selects the notifications option. <br> 2. The app shows the list of classes the student is enrolled in and which have the notifications on. <br> 3. The student selects the option tab on the notifications menu <br> 4. The student chooses the alter the notification appearance option. <br> 5. The student decides on the notification's appearance by selecting differant banner styles.<br> 6. The student confirms the changes by selecting the apply button. |
-| *Alternative flows and exceptions* | - If the student doesn't modify the notification's appearance, the notification will be set with the default one. <br> - If in step 6 the students selects the cancel button the notifications will be set to the previous appearance selected by the student or if none exists to the default option. |
+| *Alternative flows and exceptions* | Default Set Up - If the student doesn't modify the notification's appearance, the notification will be set with the default one. <br> Cancel Button - If in step 6 the students selects the cancel button the notifications will be set to the previous appearance selected by the student or if none exists to the default option. |
 
 <br><br>
 
