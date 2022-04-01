@@ -28,7 +28,7 @@ Description for each use case:
 | *Preconditions* | - The student has UNI app installed. <br> - The student is enrolled in FEUP. <br> - The student is enrolled in one or more classes. |
 | *Postconditions* | - The student receives a notification warning them that his next class will start. |
 | *Normal flow* | 1. The student accesses the UNI app and selects the notifications option. <br> 2. The app shows the list of classes the student is enrolled in. <br> 3. The student can select which classes to receive notification from. <br> 4. After choosing which classes the Student wnats to receive notifications from, he confirms them by selecting an apply button. <br> 5. The app tracks the current time from the internet in order to send the notification. |
-| *Alternative flows and exceptions* | Cancel button - If in step 4 of the normal flow the Student chooses the cancel button the app returns to the notifications menu without changes. <br> Internet connection lost - If in step 5 of the normal flow the access to the internet isn’t possible the app should track the device’s clock. |
+| *Alternative flows and exceptions* | Cancel Button - If in step 4 of the normal flow the Student chooses the cancel button the app returns to the notifications menu without changes. <br> No Internet Connection - If in step 5 of the normal flow the access to the internet isn’t possible the app should track the device’s clock. |
 
 <br><br>
 
