@@ -105,7 +105,7 @@ In order to document the high-level logical structure of the code, we have divid
 -`Database` - Stores information regarding users, notifications and  authentications, while allowing the app to access information given by the user.
 
 <p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/logical%20view%20white.png">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/logical%20view%202%20white.png">
  </p>
 
 <br><br><br><br><br><br>
