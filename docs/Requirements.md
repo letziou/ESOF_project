@@ -103,6 +103,6 @@ Description for each use case:
 ## Product Management
 To organize our team, the tool @Github Projects was used.<br>
 
-We have used two projects:
-*''Nots' project planning' - for the overall landmarks progress in development.
-*'Product management' - for organizing the app development with user case implementation.
+We have used two projects:<br>
+* ' 'Nots' project planning ' - for the overall landmarks progress in development.
+* ' Product management ' - for organizing the app development with user case implementation.
