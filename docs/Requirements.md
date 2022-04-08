@@ -96,13 +96,13 @@ Description for each use case:
 
 In order to document the high-level logical structure of the code, we have divided our project into four different sections:
 
--`Interface`: Interacts with the user. Is responsible for the delivery of the notifications to the user.
+* `Interface`: Interacts with the user. Is responsible for the delivery of the notifications to the user.
 
--`Logic`: Estabilishes the communication between the database and the visual interface, while also taking into account the user authentication. 
+* `Logic`: Estabilishes the communication between the database and the visual interface, while also taking into account the user authentication. 
 
--`Authentication`- Is responsible for the app's authentication (login details)
+* `Authentication`- Is responsible for the app's authentication (login details)
 
--`Database` - Stores information regarding users, notifications and  authentications, while allowing the app to access information given by the user.
+* `Database` - Stores information regarding users, notifications and  authentications, while allowing the app to access information given by the user.
 
 <p align="center" justify="center">
   <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/logical%20view%202%20white.png">
@@ -111,8 +111,8 @@ In order to document the high-level logical structure of the code, we have divid
 <br><br><br><br><br><br>
 
 ## Product Management
-To organize our team, the tool @Github Projects was used.<br>
+To organize our team, the tool <a href="https://github.com/LEIC-ES-2021-22/2LEIC13T1/projects">@Github Projects<a> was used.<br>
 
 We have used two projects:<br>
- ` 'Nots' project planning ` - for the overall landmarks progress in development.<br>
- ` Product management ` - for organizing the app development with user case implementation.<br>
+* `'Nots' project planning ` - for the overall landmarks progress in development.<br>
+* `Product management ` - for organizing the app development with user case implementation.<br>
