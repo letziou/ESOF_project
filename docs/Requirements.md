@@ -114,5 +114,5 @@ In order to document the high-level logical structure of the code, we have divid
 To organize our team, the tool <a href="https://github.com/LEIC-ES-2021-22/2LEIC13T1/projects">@Github Projects<a> was used.<br>
 
 We have used two projects:<br>
-* `'Nots' project planning ` - for the overall landmarks progress in development.<br>
-* `Product management ` - for organizing the app development with user case implementation.<br>
+* `'Nots' project planning` - for the overall landmarks progress in development.<br>
+* `Product management` - for organizing the app development with user case implementation.<br>
