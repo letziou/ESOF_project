@@ -97,3 +97,12 @@ Description for each use case:
 <p align="center" justify="center">
   <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/logical%20view%20white.png">
  </p>
+
+<br><br><br><br><br><br>
+
+##Product Management
+To organize our team, the tool @Github Projects was used.
+
+We have used two projects:
+''Nots' project planning' - for the overall landmarks progress in development.
+'Product management' - for organizing the app development with user case implementation.
