@@ -110,6 +110,7 @@ In order to document the high-level logical structure of the code, we have divid
 
 <br><br>
 ### Physical Architecture
+![](https://raw.githubusercontent.com/LEIC-ES-2021-22/2LEIC13T1/main/images/physical%20model%20final%203.png?token=GHSAT0AAAAAABQINO4V5D67WMGMVKX66STKYSTM6WQ)
 <br><br><br><br>
 
 ## Product Management
