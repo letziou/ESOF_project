@@ -108,7 +108,9 @@ In order to document the high-level logical structure of the code, we have divid
   <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/logical%20view%202%20white.png">
  </p>
 
-<br><br><br><br><br><br>
+<br><br>
+### Physical Architecture
+<br><br><br><br>
 
 ## Product Management
 To organize our team, the tool <a href="https://github.com/LEIC-ES-2021-22/2LEIC13T1/projects">@Github Projects<a> was used.<br>
