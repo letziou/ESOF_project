@@ -110,11 +110,17 @@ In order to document the high-level logical structure of the code, we have divid
 
 <br><br>
 ### Physical Architecture
+
+* `User's Phone`: We are using the flutter framework to build our UNI’s application module, we also make extensive use of the internal clock of the user’s phone, as the basis of time keeping, to execute the notifications at the right time.
+* `FEUP server`: On the FEUP server machine we’ll be using SQLite for both the query logic and the database itself.  The query logic will also be charged with juggling the user’s notifications trough the use of the FireBase API.
+* `FireBase`: The FireBase API is being used as a means to get notifications delivered to our users, through the use of their cloud messaging system. 
+* `Sigarra`: We are scrubbing the database data from sigarra.
+
+
 <p align="center" justify="center">
  <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/physical%20model%20final%203.png">
 </p>
 
-![](https://raw.githubusercontent.com/LEIC-ES-2021-22/2LEIC13T1/main/images/physical%20model%20final%203.png?token=GHSAT0AAAAAABQINO4V5D67WMGMVKX66STKYSTM6WQ)
 <br><br>
 ## Prototype
 
