@@ -14,9 +14,9 @@ Here you can find the details of all aspects of the module we are developing for
   * [User stories](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#User-stories)
   * [Domain model](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Domain-model)
 * [Architecture and Design](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#architecture-and-design)
-  * [Logical architecture](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#logical-architecture)
-  * [Physical architecture](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#physical-architecture)
-  * [Prototype]
+  * [Logical architecture](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Logical-architecture)
+  * [Physical architecture](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Physical-architecture)
+  * [Prototype](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Prototype)
 * [Implementation]
 * [Test]
 * [Configuration and change management]
