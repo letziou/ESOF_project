@@ -115,7 +115,10 @@ In order to document the high-level logical structure of the code, we have divid
 </p>
 
 ![](https://raw.githubusercontent.com/LEIC-ES-2021-22/2LEIC13T1/main/images/physical%20model%20final%203.png?token=GHSAT0AAAAAABQINO4V5D67WMGMVKX66STKYSTM6WQ)
-<br><br><br><br>
+<br><br>
+## Prototype
+
+<br><br>
 
 ## Product Management
 To organize our team, the tool <a href="https://github.com/LEIC-ES-2021-22/2LEIC13T1/projects">@Github Projects<a> was used.<br>
