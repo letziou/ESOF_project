@@ -118,6 +118,11 @@ In order to document the high-level logical structure of the code, we have divid
 <br><br>
 ## Prototype
 
+For the application prototype, we decided to start with the implementation of firebase, since all our work will involve notifications. We've started with a simple prototype that should show a counter with the number of notifications received from firebase and their contents, but unfortunately, we are currently unable to make the contents of the notifications be shown on screen. We have searched for every mistake possible and cannot find an error.
+
+We would like to request assistance since its easter, and we are not able to get in contact with the monitors.
+
+
 <br><br>
 
 ## Product Management
