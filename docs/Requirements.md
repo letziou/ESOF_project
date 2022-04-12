@@ -124,10 +124,15 @@ In order to document the high-level logical structure of the code, we have divid
 <br><br>
 ## Prototype
 
-For the application prototype, we decided to start with the implementation of firebase, since all our work will involve notifications. We've started with a simple prototype that should show a counter with the number of notifications received from firebase and their contents, but unfortunately, we are currently unable to make the contents of the notifications be shown on screen. We have searched for every mistake possible and cannot find an error.
+For the application prototype, we decided to start by implementing a simple three button screen, where each button has a function.
 
-We would like to request assistance since its easter, and we are not able to get in contact with the monitors.
+The first button (green) sends a standard notification to the user’s own device. 
 
+The second button (purple) when pressed displays a clock where the user can choose the time, this will be used to set the time frame for which the notification will be sent.
+
+The third button (red) has the functionality of removing all notifications from the dashboard and remove them from schedule stack.
+
+link to the prototype branch: https://github.com/LEIC-ES-2021-22/2LEIC13T1/tree/prototype/notification
 
 <br><br>
 
