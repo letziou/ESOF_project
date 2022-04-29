@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notification/screens/alarms.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
 import 'notificationservice.dart';
@@ -33,10 +34,13 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             GestureDetector(
               onTap: () {
@@ -46,7 +50,7 @@ class _MainScreenState extends State<MainScreen> {
                 margin: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
                 height: 40,
                 width: 200,
-                color: Colors.red,
+                color: Colors.lightBlue,
                 child: const Center(
                   child: Text(
                     "Cancel All Notifications",
@@ -87,6 +91,46 @@ class _MainScreenState extends State<MainScreen> {
           ],
         ),
       ),
+      drawer: getNavDrawer(context),
     );
   }
+
+  Drawer getNavDrawer(BuildContext context) {
+    var headerChild = DrawerHeader(child: Text("Header"));
+    var aboutChild = AboutListTile(
+        child: Text("About"),
+        applicationName: "Application Name",
+        applicationVersion: "v1.0.0",
+        applicationIcon: Icon(Icons.adb),
+        icon: Icon(Icons.info));
+
+    ListTile getNavItem(var icon, String s, String routeName) {
+      return ListTile(
+        leading: Icon(icon),
+        title: Text(s),
+        onTap: () {
+          setState(() {
+            // pop closes the drawer
+            Navigator.of(context).pop();
+            // navigate to the route
+            Navigator.of(context).pushNamed(routeName);
+          });
+        },
+      );
+    }
+
+    var myNavChildren = [
+      headerChild,
+      getNavItem(Icons.settings, "Alarms", AlarmsScreen.routeName),
+      getNavItem(Icons.home, "Home", "/"),
+      aboutChild
+    ];
+
+    ListView listView = ListView(children: myNavChildren);
+
+    return Drawer(
+      child: listView,
+    );
+  }
+
 }

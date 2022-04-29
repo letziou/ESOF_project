@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notification/screens/alarms.dart';
 import 'mainscreen.dart';
 import 'notificationservice.dart';
 
@@ -16,10 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: <String, WidgetBuilder>{
+        AlarmsScreen.routeName: (BuildContext context) => AlarmsScreen(),
+      },
       home: const MainScreen(),
     );
   }
