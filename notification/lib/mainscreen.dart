@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notification/screens/tester.dart';
+import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:flutter_material_pickers/flutter_material_pickers.dart';
+import 'package:intl/intl.dart';
 
 import 'notificationservice.dart';
 
@@ -33,9 +36,9 @@ class _MainScreenState extends State<MainScreen> {
         title: Text("Alarms"),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.brush),
+            icon: const Icon(Icons.alarm),
             tooltip: 'edit',
-            onPressed: () {}, //to change alarms
+            onPressed: () {},
           ),
         ],
       ),
