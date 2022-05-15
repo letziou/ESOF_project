@@ -97,6 +97,12 @@ class _MainScreenState extends State<MainScreen> {
                                 times[index].toString() +
                                 ' minutes',
                             1);
+                        NotificationService().showNotification(
+                            1,
+                            entries[index],
+                            'Your class is about to start in ' +
+                                times[index].toString(),
+                            times[index]);
                       } else {
                         NotificationService().showNotification(
                             1, entries[index], 'No time set', 1);
