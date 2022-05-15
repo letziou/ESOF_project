@@ -38,7 +38,16 @@ class _MainScreenState extends State<MainScreen> {
           IconButton(
             icon: const Icon(Icons.alarm),
             tooltip: 'edit',
-            onPressed: () {},
+            onPressed: () {
+              showMaterialNumberPicker(
+                context: context,
+                title: 'Pick Your Minutes',
+                maxNumber: 59,
+                minNumber: 0,
+                selectedNumber: 0,
+                onChanged: (value) => setState(() => times[0] = value),
+              );
+            },
           ),
         ],
       ),
