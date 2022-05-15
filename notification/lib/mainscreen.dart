@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notification/screens/alarms.dart';
-import 'package:timezone/data/latest.dart' as tz;
+import 'package:notification/screens/tester.dart';
 
 import 'notificationservice.dart';
 
@@ -12,91 +11,109 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  late TimeOfDay time;
-  late TimeOfDay picked;
-
   @override
-  void initState() {
+  initState() {
     super.initState();
-
-    tz.initializeTimeZones();
-    time = TimeOfDay.now();
   }
 
-  Future<void> selectTime(BuildContext context) async {
-    picked = (await showTimePicker(context: context, initialTime: time))!;
+  final List<String> entries = <String>['LTW', 'ES', 'SO', 'LC', 'DA', 'FI'];
+  List<bool> active = List.filled(6, false);
+  List<int> times = <int>[10, 10, 20, 10, 10, 0];
 
-    setState(() {
-      time = picked;
-    });
-  }
+  Icon unactiveIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
+  Icon activeIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
+  Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: Text("Alarms"),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.brush),
+            tooltip: 'edit',
+            onPressed: () {}, //to change alarms
+          ),
+        ],
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            GestureDetector(
-              onTap: () {
-                NotificationService().cancelAllNotifications();
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-                height: 40,
-                width: 200,
-                color: Colors.lightBlue,
-                child: const Center(
-                  child: Text(
-                    "Cancel All Notifications",
+      body: ListView.builder(
+        padding: const EdgeInsets.all(15.0),
+        itemCount: entries.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+              height: 60,
+              width: 400,
+              margin: const EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
+              padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+              alignment: Alignment.centerLeft,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                border: Border.all(
+                  color: Colors.grey.shade400,
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    entries[index],
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: Color.fromARGB(255, 110, 33, 14),
+                        fontWeight: FontWeight.w500),
                   ),
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                selectTime(context);
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-                height: 40,
-                width: 200,
-                color: Colors.deepPurple,
-                child: const Center(
-                  child: Text(
-                    "Set up Notification",
+                  IconButton(
+                    icon: active[index] ? activeIcon : unactiveIcon,
+                    onPressed: () {
+                      try {
+                        setState(() {
+                          active[index] = !active[index];
+                        });
+                      } catch (e) {
+                        print(e);
+                      }
+                    },
                   ),
-                ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                NotificationService().showNotification(1, "title of notification", "body of notification", 1);
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-                height: 40,
-                width: 200,
-                color: Colors.green,
-                child: const Center(
-                  child: Text("Show Notification"),
-                ),
-              ),
-            ),
-          ],
-        ),
+                  Text(
+                    times[index] != 0
+                        ? times[index].toString() + ' min. Before'
+                        : 'No alarm',
+                    style: TextStyle(
+                        fontSize: 22,
+                        color: Color.fromARGB(255, 110, 33, 14),
+                        fontWeight: FontWeight.w500),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      if (times[index] != 0) {
+                        NotificationService().showNotification(
+                            1,
+                            entries[index],
+                            'Starting in ' +
+                                times[index].toString() +
+                                ' minutes',
+                            1);
+                      } else {
+                        NotificationService().showNotification(
+                            1, entries[index], 'No time set', 1);
+                      }
+                    },
+                    icon: notify,
+                  ),
+                ],
+              ));
+        },
       ),
       drawer: getNavDrawer(context),
     );
   }
 
   Drawer getNavDrawer(BuildContext context) {
-    var headerChild = DrawerHeader(child: Text("Header"));
+    var headerChild = DrawerHeader(child: Text("Menu"));
     var aboutChild = AboutListTile(
         child: Text("About"),
         applicationName: "Application Name",
@@ -121,7 +138,7 @@ class _MainScreenState extends State<MainScreen> {
 
     var myNavChildren = [
       headerChild,
-      getNavItem(Icons.settings, "Alarms", AlarmsScreen.routeName),
+      getNavItem(Icons.settings, "Tester", AlarmsScreen.routeName),
       getNavItem(Icons.home, "Home", "/"),
       aboutChild
     ];
@@ -132,5 +149,4 @@ class _MainScreenState extends State<MainScreen> {
       child: listView,
     );
   }
-
 }
