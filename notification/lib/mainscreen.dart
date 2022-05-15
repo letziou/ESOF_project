@@ -45,7 +45,8 @@ class _MainScreenState extends State<MainScreen> {
                 maxNumber: 59,
                 minNumber: 0,
                 selectedNumber: 0,
-                onChanged: (value) => setState(() => times[0] = value),
+                onChanged: (value) =>
+                    setState(() => times.fillRange(0, times.length, value)),
               );
             },
           ),
