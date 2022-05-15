@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notification/screens/alarms.dart';
+import 'package:notification/screens/tester.dart';
 import 'mainscreen.dart';
 import 'notificationservice.dart';
 
