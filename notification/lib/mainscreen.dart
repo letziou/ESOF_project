@@ -108,7 +108,7 @@ class _MainScreenState extends State<MainScreen> {
                                   minNumber: 0,
                                   selectedNumber: 0,
                                   onChanged: (value) =>
-                                      setState(() => times.fillRange(0, times.length, value)),
+                                      setState(() => times[index] = value),
                                 );
                               },
                           style: TextStyle(fontSize: 22, color: Palette.kToDark,
