@@ -101,7 +101,15 @@ class _MainScreenState extends State<MainScreen> {
                             text: times[index].toString() + ' min',
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                print('The button is clicked!');
+                                showMaterialNumberPicker(
+                                  context: context,
+                                  title: 'Pick Timer',
+                                  maxNumber: 59,
+                                  minNumber: 0,
+                                  selectedNumber: 0,
+                                  onChanged: (value) =>
+                                      setState(() => times.fillRange(0, times.length, value)),
+                                );
                               },
                           style: TextStyle(fontSize: 22, color: Palette.kToDark,
                               fontWeight: FontWeight.w500),),
