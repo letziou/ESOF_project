@@ -12,6 +12,7 @@ class MainScreen extends StatefulWidget {
   @override
   _MainScreenState createState() => _MainScreenState();
 }
+  final List<String> entries = <String>['LTW', 'ES', 'SO', 'LC', 'DA', 'FI'];
 
 class _MainScreenState extends State<MainScreen> {
   @override
@@ -19,14 +20,13 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
   }
 
-  final List<String> entries = <String>['LTW', 'ES', 'SO', 'LC', 'DA', 'FI'];
   List<bool> active = List.filled(6, false);
-  List<int> times = <int>[10, 10, 20, 10, 10, 0];
+  static const base = 10;
+  static int size = entries.length;
+  final times = List<int>.filled(size,base);
 
-  Icon unactiveIcon =
-      Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
-  Icon activeIcon =
-      Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
+  Icon unactiveIcon = Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
+  Icon activeIcon = Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
   Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
 
   @override
