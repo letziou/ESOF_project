@@ -49,7 +49,7 @@ class _AlarmScreenState extends State<AlarmsScreen> {
                     left: 20, top: 20, right: 20, bottom: 20),
                 height: 40,
                 width: 200,
-                color: Colors.lightBlue,
+                color: Colors.red[900],
                 child: const Center(
                   child: Text(
                     "Cancel All Notifications",
@@ -66,7 +66,7 @@ class _AlarmScreenState extends State<AlarmsScreen> {
                     left: 20, top: 20, right: 20, bottom: 20),
                 height: 40,
                 width: 200,
-                color: Colors.deepPurple,
+                color: Colors.red[700],
                 child: const Center(
                   child: Text(
                     "Set up Notification",
@@ -84,7 +84,7 @@ class _AlarmScreenState extends State<AlarmsScreen> {
                     left: 20, top: 20, right: 20, bottom: 20),
                 height: 40,
                 width: 200,
-                color: Colors.green,
+                color: Colors.red[500],
                 child: const Center(
                   child: Text("Show Notification"),
                 ),

@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:notification/screens/tester.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
@@ -41,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
             onPressed: () {
               showMaterialNumberPicker(
                 context: context,
-                title: 'Pick Your Minutes',
+                title: 'Pick Timer',
                 maxNumber: 59,
                 minNumber: 0,
                 selectedNumber: 0,
@@ -91,14 +92,22 @@ class _MainScreenState extends State<MainScreen> {
                       }
                     },
                   ),
-                  Text(
-                    times[index] != 0
-                        ? times[index].toString() + ' min. Before'
-                        : 'No alarm',
-                    style: TextStyle(
-                        fontSize: 22,
-                        color: Color.fromARGB(255, 110, 33, 14),
-                        fontWeight: FontWeight.w500),
+                  RichText(
+                    text: TextSpan(
+                      text: null,
+                      style: TextStyle(fontSize: 30, color: Colors.black),
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: times[index].toString(),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                print('The button is clicked!');
+                              },
+                            style: TextStyle(
+                              color: Colors.black,
+                            )),
+                      ],
+                    ),
                   ),
                   IconButton(
                     onPressed: () {
