@@ -2,9 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:notification/palette.dart';
 import 'package:notification/screens/tester.dart';
-import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter_material_pickers/flutter_material_pickers.dart';
-import 'package:intl/intl.dart';
 
 import 'notificationservice.dart';
 
@@ -117,7 +115,7 @@ class _MainScreenState extends State<MainScreen> {
                           style: TextStyle(fontSize: 22, color: Palette.kToDark,
                               fontWeight: FontWeight.w500)
                         )
-                      ]
+                      ],
                     ),
                   ),
                   IconButton(
