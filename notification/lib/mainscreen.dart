@@ -2,9 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:notification/palette.dart';
 import 'package:notification/screens/tester.dart';
-import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter_material_pickers/flutter_material_pickers.dart';
-import 'package:intl/intl.dart';
 
 import 'notificationservice.dart';
 
@@ -47,8 +45,7 @@ class _MainScreenState extends State<MainScreen> {
                 maxNumber: 59,
                 minNumber: 0,
                 selectedNumber: 0,
-                onChanged: (value) =>
-                    setState(() => times.fillRange(0, times.length, value)),
+                onChanged: (value) => setState(() => times.fillRange(0, times.length, value)),
               );
             },
           ),
@@ -96,7 +93,7 @@ class _MainScreenState extends State<MainScreen> {
                   RichText(
                     text: TextSpan(
                       text: null,
-                      children: <TextSpan>[
+                      children: active[index] ? [
                         TextSpan(
                             text: times[index].toString() + ' min',
                             recognizer: TapGestureRecognizer()
@@ -113,6 +110,11 @@ class _MainScreenState extends State<MainScreen> {
                               },
                           style: TextStyle(fontSize: 22, color: Palette.kToDark,
                               fontWeight: FontWeight.w500),),
+                      ]
+                    : [ const TextSpan(text: 'no alarm',
+                          style: TextStyle(fontSize: 22, color: Palette.kToDark,
+                              fontWeight: FontWeight.w500)
+                        )
                       ],
                     ),
                   ),
