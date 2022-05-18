@@ -113,7 +113,9 @@ class _MainScreenState extends State<MainScreen> {
                           style: TextStyle(fontSize: 22, color: Palette.kToDark,
                               fontWeight: FontWeight.w500),),
                       ]
-                    : [ const TextSpan(text: 'no alarm'
+                    : [ const TextSpan(text: 'no alarm',
+                          style: TextStyle(fontSize: 22, color: Palette.kToDark,
+                              fontWeight: FontWeight.w500)
                         )
                       ]
                     ),
