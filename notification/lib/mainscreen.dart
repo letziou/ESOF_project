@@ -47,8 +47,7 @@ class _MainScreenState extends State<MainScreen> {
                 maxNumber: 59,
                 minNumber: 0,
                 selectedNumber: 0,
-                onChanged: (value) =>
-                    setState(() => times.fillRange(0, times.length, value)),
+                onChanged: (value) => setState(() => times.fillRange(0, times.length, value)),
               );
             },
           ),
@@ -96,7 +95,7 @@ class _MainScreenState extends State<MainScreen> {
                   RichText(
                     text: TextSpan(
                       text: null,
-                      children: <TextSpan>[
+                      children: active[index] ? [
                         TextSpan(
                             text: times[index].toString() + ' min',
                             recognizer: TapGestureRecognizer()
@@ -113,7 +112,10 @@ class _MainScreenState extends State<MainScreen> {
                               },
                           style: TextStyle(fontSize: 22, color: Palette.kToDark,
                               fontWeight: FontWeight.w500),),
-                      ],
+                      ]
+                    : [ const TextSpan(text: 'no alarm'
+                        )
+                      ]
                     ),
                   ),
                   IconButton(
