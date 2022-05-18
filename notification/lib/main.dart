@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notification/screens/tester.dart';
 import 'mainscreen.dart';
 import 'notificationservice.dart';
+import 'palette.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -9,6 +10,7 @@ void main() {
 
   runApp(const MyApp());
 }
+  //Color c = const Color.fromARGB(255, 110, 33, 14);
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -19,9 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Palette.kToDark,),
       routes: <String, WidgetBuilder>{
         AlarmsScreen.routeName: (BuildContext context) => AlarmsScreen(),
       },

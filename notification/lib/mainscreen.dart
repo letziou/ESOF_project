@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:notification/palette.dart';
 import 'package:notification/screens/tester.dart';
+import 'package:flutter_material_pickers/flutter_material_pickers.dart';
 
 import 'notificationservice.dart';
 
@@ -9,6 +12,7 @@ class MainScreen extends StatefulWidget {
   @override
   _MainScreenState createState() => _MainScreenState();
 }
+  final List<String> entries = <String>['LTW', 'ES', 'SO', 'LC', 'DA', 'FI'];
 
 class _MainScreenState extends State<MainScreen> {
   @override
@@ -16,14 +20,13 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
   }
 
-  final List<String> entries = <String>['LTW', 'ES', 'SO', 'LC', 'DA', 'FI'];
   List<bool> active = List.filled(6, false);
-  List<int> times = <int>[10, 10, 20, 10, 10, 0];
+  static const base = 10;
+  static int size = entries.length;
+  final times = List<int>.filled(size,base);
 
-  Icon unactiveIcon =
-      Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
-  Icon activeIcon =
-      Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
+  Icon unactiveIcon = Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
+  Icon activeIcon = Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
   Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
 
   @override
@@ -33,9 +36,18 @@ class _MainScreenState extends State<MainScreen> {
         title: Text("Alarms"),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.brush),
+            icon: const Icon(Icons.alarm),
             tooltip: 'edit',
-            onPressed: () {}, //to change alarms
+            onPressed: () {
+              showMaterialNumberPicker(
+                context: context,
+                title: 'Pick Timer',
+                maxNumber: 59,
+                minNumber: 0,
+                selectedNumber: 0,
+                onChanged: (value) => setState(() => times.fillRange(0, times.length, value)),
+              );
+            },
           ),
         ],
       ),
@@ -63,7 +75,7 @@ class _MainScreenState extends State<MainScreen> {
                     entries[index],
                     style: TextStyle(
                         fontSize: 22,
-                        color: Color.fromARGB(255, 110, 33, 14),
+                        color: Palette.kToDark,
                         fontWeight: FontWeight.w500),
                   ),
                   IconButton(
@@ -78,14 +90,33 @@ class _MainScreenState extends State<MainScreen> {
                       }
                     },
                   ),
-                  Text(
-                    times[index] != 0
-                        ? times[index].toString() + ' min. Before'
-                        : 'No alarm',
-                    style: TextStyle(
-                        fontSize: 22,
-                        color: Color.fromARGB(255, 110, 33, 14),
-                        fontWeight: FontWeight.w500),
+                  RichText(
+                    text: TextSpan(
+                      text: null,
+                      children: active[index] ? [
+                        TextSpan(
+                            text: times[index].toString() + ' min',
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                showMaterialNumberPicker(
+                                  context: context,
+                                  title: 'Pick Timer',
+                                  maxNumber: 59,
+                                  minNumber: 0,
+                                  selectedNumber: 0,
+                                  onChanged: (value) =>
+                                      setState(() => times[index] = value),
+                                );
+                              },
+                          style: TextStyle(fontSize: 22, color: Palette.kToDark,
+                              fontWeight: FontWeight.w500),),
+                      ]
+                    : [ const TextSpan(text: 'no alarm',
+                          style: TextStyle(fontSize: 22, color: Palette.kToDark,
+                              fontWeight: FontWeight.w500)
+                        )
+                      ],
+                    ),
                   ),
                   IconButton(
                     onPressed: () {
