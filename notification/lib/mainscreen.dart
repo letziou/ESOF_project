@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:notification/screens/alarms.dart';
-import 'package:timezone/data/latest.dart' as tz;
+import 'package:notification/palette.dart';
+import 'package:notification/screens/tester.dart';
+import 'package:flutter_material_pickers/flutter_material_pickers.dart';
 
 import 'notificationservice.dart';
 
@@ -10,93 +12,287 @@ class MainScreen extends StatefulWidget {
   @override
   _MainScreenState createState() => _MainScreenState();
 }
+  final List<String> entries = <String>['LTW', 'ES', 'SO', 'LC', 'DA', 'FI'];
 
 class _MainScreenState extends State<MainScreen> {
-  late TimeOfDay time;
-  late TimeOfDay picked;
-
   @override
-  void initState() {
+  initState() {
     super.initState();
-
-    tz.initializeTimeZones();
-    time = TimeOfDay.now();
   }
 
-  Future<void> selectTime(BuildContext context) async {
-    picked = (await showTimePicker(context: context, initialTime: time))!;
+  List<bool> active = List.filled(6, false);
+  List<bool> visible = List.filled(6,true);
+  bool editing = false;
+  static const base = 10;
+  static int size = entries.length;
+  final times = List<int>.filled(size,base);
 
-    setState(() {
-      time = picked;
-    });
-  }
+  Icon unactiveIcon = Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
+  Icon activeIcon = Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
+  Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
+  Icon alarm = Icon(Icons.alarm);
+  Icon editingIcon = Icon(Icons.brush);
+  Icon noeditingIcon = Icon(Icons.brush_outlined);
+  Icon visibleIcon = Icon(Icons.visibility, color: Color.fromARGB(255, 110, 33, 14));
+  Icon invisibleIcon = Icon(Icons.visibility_off, color: Color.fromARGB(255, 110, 33, 14));
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: Text("Alarms"),
+        actions: <Widget>[
+          IconButton(
+            icon: alarm,
+            tooltip: 'change time',
+            onPressed: () {
+              showMaterialNumberPicker(
+                context: context,
+                title: 'Pick Timer',
+                maxNumber: 59,
+                minNumber: 0,
+                selectedNumber: 0,
+                onChanged: (value) => setState(() => times.fillRange(0, times.length, value)),
+              );
+            },
+          ),
+          IconButton(
+            icon: editing ? editingIcon : noeditingIcon,
+              tooltip: 'edit list',
+              onPressed: () {
+                try {
+                  setState(() {
+                    editing = !editing;
+                  });
+                } catch (e) {
+                  print(e);
+                }
+            },
+          ),
+        ],
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            GestureDetector(
-              onTap: () {
-                NotificationService().cancelAllNotifications();
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-                height: 40,
-                width: 200,
-                color: Colors.lightBlue,
-                child: const Center(
-                  child: Text(
-                    "Cancel All Notifications",
+      body: ListView.builder(
+        padding: const EdgeInsets.all(15.0),
+        itemCount: entries.length,
+        itemBuilder: (BuildContext context, int index) {
+          if(!editing && visible[index]) {
+            return Container(
+                height: 60,
+                width: 400,
+                margin: const EdgeInsets.only(
+                    top: 15.0, left: 10.0, right: 10.0),
+                padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                alignment: Alignment.centerLeft,
+                decoration: BoxDecoration(
+                  color: !visible[index]? Colors.grey.shade300: Colors.grey.shade100,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                  border: Border.all(
+                    color: Colors.grey.shade400,
                   ),
                 ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                selectTime(context);
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-                height: 40,
-                width: 200,
-                color: Colors.deepPurple,
-                child: const Center(
-                  child: Text(
-                    "Set up Notification",
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      entries[index],
+                      style: TextStyle(
+                          fontSize: 22,
+                          color: Palette.kToDark,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    IconButton(
+                      icon: active[index] ? activeIcon : unactiveIcon,
+                      onPressed: () {
+                        try {
+                          setState(() {
+                            active[index] = !active[index];
+                          });
+                        } catch (e) {
+                          print(e);
+                        }
+                      },
+                    ),
+                    RichText(
+                      text: TextSpan(
+                        text: null,
+                        children: active[index] ? [
+                          TextSpan(
+                            text: times[index].toString() + ' min',
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                showMaterialNumberPicker(
+                                  context: context,
+                                  title: 'Pick Timer',
+                                  maxNumber: 59,
+                                  minNumber: 0,
+                                  selectedNumber: 0,
+                                  onChanged: (value) =>
+                                      setState(() => times[index] = value),
+                                );
+                              },
+                            style: TextStyle(
+                                fontSize: 22, color: Palette.kToDark,
+                                fontWeight: FontWeight.w500),),
+                        ]
+                            : [ const TextSpan(text: 'no alarm',
+                            style: TextStyle(
+                                fontSize: 22, color: Palette.kToDark,
+                                fontWeight: FontWeight.w500)
+                        )
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: notify,
+                      onPressed: () {
+                        if (times[index] != 0) {
+                          NotificationService().showNotification(
+                              1,
+                              entries[index],
+                              'Starting in ' +
+                                  times[index].toString() +
+                                  ' minutes',
+                              1);
+                          NotificationService().showNotification(
+                              1,
+                              entries[index],
+                              'Your class is about to start in ' +
+                                  times[index].toString(),
+                              times[index]);
+                        } else {
+                          NotificationService().showNotification(
+                              1, entries[index], 'No time set', 1);
+                        }
+                      },
+                    ),
+                  ],
+                ));
+          }else if(editing){
+            return Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                IconButton(
+                  padding: const EdgeInsets.only(
+                      top: 15.0, left: 10.0, right: 10.0),
+                  icon: visible[index] ? visibleIcon : invisibleIcon,
+                  onPressed: () {
+                    try {
+                      setState(() {
+                        visible[index] = !visible[index];
+                      });
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
                 ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                NotificationService().showNotification(1, "title of notification", "body of notification", 1);
-              },
-              child: Container(
-                margin: const EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-                height: 40,
-                width: 200,
-                color: Colors.green,
-                child: const Center(
-                  child: Text("Show Notification"),
-                ),
-              ),
-            ),
-          ],
-        ),
+                Expanded(
+                  child: Container(
+                      height: 60,
+                      width: 400,
+                      margin: const EdgeInsets.only(
+                          top: 15.0, left: 10.0, right: 10.0),
+                      padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                      alignment: Alignment.centerLeft,
+                      decoration: BoxDecoration(
+                        color: !visible[index]? Colors.grey.shade300: Colors.grey.shade100,
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                        border: Border.all(
+                          color: Colors.grey.shade400,
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            entries[index],
+                            style: TextStyle(
+                                fontSize: 22,
+                                color: Palette.kToDark,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          IconButton(
+                            icon: active[index] ? activeIcon : unactiveIcon,
+                            onPressed: () {
+                              try {
+                                setState(() {
+                                  active[index] = !active[index];
+                                });
+                              } catch (e) {
+                                print(e);
+                              }
+                            },
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              text: null,
+                              children: active[index] ? [
+                                TextSpan(
+                                  text: times[index].toString() + ' min',
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      showMaterialNumberPicker(
+                                        context: context,
+                                        title: 'Pick Timer',
+                                        maxNumber: 59,
+                                        minNumber: 0,
+                                        selectedNumber: 0,
+                                        onChanged: (value) =>
+                                            setState(() => times[index] = value),
+                                      );
+                                    },
+                                  style: TextStyle(
+                                      fontSize: 22, color: Palette.kToDark,
+                                      fontWeight: FontWeight.w500),),
+                              ]
+                                  : [ const TextSpan(text: 'no alarm',
+                                  style: TextStyle(
+                                      fontSize: 22, color: Palette.kToDark,
+                                      fontWeight: FontWeight.w500)
+                              )
+                              ],
+                            ),
+                          ),
+                          IconButton(
+                            icon: notify,
+                            onPressed: () {
+                              if (times[index] != 0) {
+                                NotificationService().showNotification(
+                                    1,
+                                    entries[index],
+                                    'Starting in ' +
+                                        times[index].toString() +
+                                        ' minutes',
+                                    1);
+                                NotificationService().showNotification(
+                                    1,
+                                    entries[index],
+                                    'Your class is about to start in ' +
+                                        times[index].toString(),
+                                    times[index]);
+                              } else {
+                                NotificationService().showNotification(
+                                    1, entries[index], 'No time set', 1);
+                              }
+                            },
+                          ),
+                        ],
+                      )),
+                )
+              ],
+            );
+          }else{
+            return Container();
+          }
+        },
       ),
       drawer: getNavDrawer(context),
     );
   }
 
   Drawer getNavDrawer(BuildContext context) {
-    var headerChild = DrawerHeader(child: Text("Header"));
+    var headerChild = DrawerHeader(child: Text("Menu"));
     var aboutChild = AboutListTile(
         child: Text("About"),
         applicationName: "Application Name",
@@ -121,7 +317,7 @@ class _MainScreenState extends State<MainScreen> {
 
     var myNavChildren = [
       headerChild,
-      getNavItem(Icons.settings, "Alarms", AlarmsScreen.routeName),
+      getNavItem(Icons.settings, "Tester", AlarmsScreen.routeName),
       getNavItem(Icons.home, "Home", "/"),
       aboutChild
     ];
@@ -132,5 +328,4 @@ class _MainScreenState extends State<MainScreen> {
       child: listView,
     );
   }
-
 }
