@@ -23,6 +23,7 @@ import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
 
 import 'controller/on_start_up.dart';
+import 'model/alarms_page_model.dart';
 import 'model/schedule_page_model.dart';
 
 /// Stores the state of the app
@@ -47,7 +48,7 @@ Future<void> main() async {
 }
 
 /// Manages the state of the app
-/// 
+///
 /// This class is necessary to track the app's state for
 /// the current execution
 class MyApp extends StatefulWidget {
@@ -88,6 +89,9 @@ class MyAppState extends State<MyApp> {
               case '/' + Constants.navSchedule:
                 return PageTransition.makePageTransition(
                     page: SchedulePage(), settings: settings);
+              case '/' + Constants.navAlarms:
+                return PageTransition.makePageTransition(
+                    page: AlarmPage(), settings: settings);
               case '/' + Constants.navExams:
                 return PageTransition.makePageTransition(
                     page: ExamsPageView(), settings: settings);
