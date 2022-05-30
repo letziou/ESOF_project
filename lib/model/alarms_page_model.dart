@@ -3,7 +3,7 @@ import 'package:uni/model/app_state.dart';
 import 'package:uni/model/entities/lecture.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:uni/view/Pages/schedule_page_view.dart';
+import 'package:uni/view/Pages/alarms_page_view.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 
 class AlarmPage extends StatefulWidget {
