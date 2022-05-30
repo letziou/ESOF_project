@@ -77,9 +77,6 @@ class AlarmPageView extends StatelessWidget {
         typeClass: lecture.typeClass,
         rooms: lecture.room,
         begin: lecture.startTime,
-        end: lecture.endTime,
-        teacher: lecture.teacher,
-        classNumber: lecture.classNumber,
       ));
     }
     return scheduleContent;
