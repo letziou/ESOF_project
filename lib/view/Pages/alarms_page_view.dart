@@ -30,7 +30,7 @@ class AlarmPageView extends StatelessWidget {
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
         children: <Widget>[
-          PageTitle(name: 'Alarme'),
+          PageTitle(name: 'Alarmes'),
           TabBar(
             controller: tabController,
             isScrollable: true,

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_material_pickers/flutter_material_pickers.dart';
 import 'package:uni/view/Widgets/row_container.dart';
 
 class AlarmSlot extends StatelessWidget {
@@ -86,6 +88,24 @@ class AlarmSlot extends StatelessWidget {
       text,
       overflow: TextOverflow.ellipsis,
       style: style,
+    );
+  }
+
+  Widget timePicker(context, alarm) {
+    return RichText(
+      text: TextSpan(
+        text: alarm.toString() + ' mins',
+        recognizer: TapGestureRecognizer()
+          ..onTap = () {
+            showMaterialNumberPicker(
+                context: context,
+                title: 'Pick Timer',
+                minNumber: 1,
+                maxNumber: 59,
+                selectedNumber: 1,
+                onChanged: (value) => alarm = value);
+          },
+      ),
     );
   }
 
