@@ -1,44 +1,38 @@
-# app_feup
+# 2LEIC13T1
 
-An app to make the lives of FEUP students easier.
-[View changelog here](changelog.md)
+NOTS development report.
 
-## Getting Started
+Welcome to the documentation page of NOTS.
 
-This project is a Flutter application.
+Here you can find the details of all aspects of the module we are developing for the UNI app, from a high-level vision to the low-level implementation, also a sort of Software report, organized by discipline as RUP.
 
-A few resources to get you started if this is your first Flutter project:
+* Business modeling 
+  * [Product Vision](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/ProductVision.md)
+  * [Elevator Pitch]
+* [Requirements](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md)
+  * [Use Case Model](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Use-case-model)
+  * [User stories](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#User-stories)
+  * [Domain model](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Domain-model)
+* [Architecture and Design](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#architecture-and-design)
+  * [Logical architecture](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Logical-architecture)
+  * [Physical architecture](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Physical-architecture)
+  * [Prototype](https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/docs/Requirements.md#Prototype)
+* [Implementation]
+* [Test]
+* [Configuration and change management]
+* [Project management]
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+So far, contributions are exclusively made by the initial team, but we hope to open them to the community, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
 
-For help getting started with Flutter, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Please contact us! 
 
+Thank you for your time.
 
-## Requirements
+---
 
-In order to submit bug reports to the Github API, a Github Personal Access Token is required.
-If you don't have one, you can create it on https://github.com/settings/tokens. The only permission it needs is **repo > public_repo**.
+### Members:
 
-The token is read from the file ```assets/env/env.json```, which you may need to create, and must be in the following format:
-
-```json
-{
-  "gh_token" : "your super secret token"
-}
-```
-
-## Release
-
-To release the app, a few steps are required:
-
-- Make sure the terms and conditions do not need updating
-- Make sure you have completed the **Requirements** section of this README
-- Increase the version in pubspec.yaml
-- Fill the fields in android/key.properties. [This might require creation of a store](https://flutter.dev/docs/deployment/android)
-- Run `flutter build appbundle lib/main.dart` to generate the bundle ready for upload
-- Make sure the Play Store's Content Rating is accurate before rolling out the app
-
-[Here's the full guide to releasing a flutter application](https://flutter.dev/docs/deployment/android)
+Diogo Pinheiro Almeida - 202006059<br>
+Jose Manuel Henriques Valente Marques de Sousa - 202006141<br>
+Rafael Nuno Grilo Morgado - 201506449<br>
+Rúben Lourinha Monteiro - 202006478<br>
