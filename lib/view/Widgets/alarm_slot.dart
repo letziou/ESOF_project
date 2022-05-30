@@ -9,6 +9,12 @@ class AlarmSlot extends StatelessWidget {
   final String rooms;
   final String begin;
   final String typeClass;
+  final int alarmBase = 10;
+  Icon unactiveIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
+  Icon activeIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
+  Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
 
   AlarmSlot({
     Key key,
@@ -40,20 +46,6 @@ class AlarmSlot extends StatelessWidget {
         ));
   }
 
-  Widget createScheduleSlotTime(context) {
-    return Column(
-      key: Key('schedule-slot-time-${this.begin}'),
-      children: <Widget>[
-        createScheduleTime(this.begin, context),
-      ],
-    );
-  }
-
-  Widget createScheduleTime(String time, context) => createTextField(
-      time,
-      Theme.of(context).textTheme.headline4.apply(fontSizeDelta: 5),
-      TextAlign.center);
-
   List<Widget> createScheduleSlotPrimInfo(context) {
     final subjectTextField = createTextField(
         this.subject,
@@ -78,7 +70,8 @@ class AlarmSlot extends StatelessWidget {
           ),
         ],
       ),
-      createScheduleSlotTime(context),
+      createTimePicker(context, alarmBase,
+          Theme.of(context).textTheme.headline4.apply(fontSizeDelta: 5)),
       createScheduleSlotPrimInfoColumn(roomTextField)
     ];
   }
@@ -91,7 +84,7 @@ class AlarmSlot extends StatelessWidget {
     );
   }
 
-  Widget timePicker(context, alarm) {
+  Widget createTimePicker(context, alarm, style) {
     return RichText(
       text: TextSpan(
         text: alarm.toString() + ' mins',
@@ -105,6 +98,7 @@ class AlarmSlot extends StatelessWidget {
                 selectedNumber: 1,
                 onChanged: (value) => alarm = value);
           },
+        style: style,
       ),
     );
   }
