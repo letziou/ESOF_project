@@ -10,11 +10,12 @@ class AlarmSlot extends StatelessWidget {
   final String begin;
   final String typeClass;
   final int alarmBase = 10;
-  Icon unactiveIcon =
+  final Icon unactiveIcon =
       Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
-  Icon activeIcon =
+  final Icon activeIcon =
       Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
-  Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
+  final Icon notify =
+      Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
 
   AlarmSlot({
     Key key,
