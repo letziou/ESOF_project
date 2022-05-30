@@ -63,7 +63,7 @@ class _AlarmPageState extends SecondaryPageViewState
       builder: (context, lectureData) {
         final lectures = lectureData.item1;
         final scheduleStatus = lectureData.item2;
-        return SchedulePageView(
+        return AlarmPageView(
             tabController: tabController,
             scrollViewController: scrollViewController,
             daysOfTheWeek: daysOfTheWeek,

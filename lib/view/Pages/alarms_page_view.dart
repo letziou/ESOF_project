@@ -3,11 +3,11 @@ import 'package:uni/model/entities/lecture.dart';
 import 'package:flutter/material.dart';
 import 'package:uni/view/Widgets/page_title.dart';
 import 'package:uni/view/Widgets/request_dependent_widget_builder.dart';
-import 'package:uni/view/Widgets/schedule_slot.dart';
+import 'package:uni/view/Widgets/alarm_slot.dart';
 
 /// Manages the 'schedule' sections of the app
-class SchedulePageView extends StatelessWidget {
-  SchedulePageView(
+class AlarmPageView extends StatelessWidget {
+  AlarmPageView(
       {Key key,
       @required this.tabController,
       @required this.daysOfTheWeek,
@@ -72,7 +72,7 @@ class SchedulePageView extends StatelessWidget {
     final List<Widget> scheduleContent = <Widget>[];
     for (int i = 0; i < lectures.length; i++) {
       final Lecture lecture = lectures[i];
-      scheduleContent.add(ScheduleSlot(
+      scheduleContent.add(AlarmSlot(
         subject: lecture.subject,
         typeClass: lecture.typeClass,
         rooms: lecture.room,
