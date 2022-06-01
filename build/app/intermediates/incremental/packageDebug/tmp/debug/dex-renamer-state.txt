@@ -1,4 +1,4 @@
-#Wed Jun 01 17:42:57 WEST 2022
+#Wed Jun 01 23:22:06 WEST 2022
 base.0=/home/username/2aulas/2sem/ES/2LEIC13T1/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

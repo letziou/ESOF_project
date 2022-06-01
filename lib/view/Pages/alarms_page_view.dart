@@ -39,6 +39,14 @@ class AlarmPageViewState extends State<AlarmPageView> {
   final TabController tabController;
   final ScrollController scrollViewController;
   final List<int> times = <int>[];
+  final List<bool> active = <bool>[];
+
+  Icon unactiveIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
+  Icon activeIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
+  Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
+  Icon alarm = Icon(Icons.alarm);
 
   AlarmPageViewState(this.tabController, this.daysOfTheWeek, this.aggLectures,
       this.scheduleStatus, this.scrollViewController);
@@ -78,6 +86,7 @@ class AlarmPageViewState extends State<AlarmPageView> {
         child: Tab(key: Key('schedule-page-tab-$i'), text: daysOfTheWeek[i]),
       ));
       times.add(10);
+      active.add(false);
     }
     return tabs;
   }
@@ -172,7 +181,9 @@ class AlarmPageViewState extends State<AlarmPageView> {
     final roomTextField = createTextField(
         rooms,
         Theme.of(context).textTheme.headline4.apply(fontSizeDelta: -4),
-        TextAlign.left);
+        TextAlign.center);
+    final alarmTextPicker = createTimePicker(context,
+        Theme.of(context).textTheme.headline4.apply(fontSizeDelta: 5), place);
     return [
       Column(
         children: <Widget>[
@@ -184,9 +195,8 @@ class AlarmPageViewState extends State<AlarmPageView> {
           ),
         ],
       ),
-      createTimePicker(context,
-          Theme.of(context).textTheme.headline4.apply(fontSizeDelta: 5), place),
-      createScheduleSlotPrimInfoColumn(roomTextField)
+      alarmTextPicker,
+      createScheduleSlotPrimInfoColumn(createActiveButton(place))
     ];
   }
 
@@ -201,19 +211,42 @@ class AlarmPageViewState extends State<AlarmPageView> {
   Widget createTimePicker(context, style, place) {
     return RichText(
       text: TextSpan(
-        text: times.elementAt(place).toString() + ' mins',
-        recognizer: TapGestureRecognizer()
-          ..onTap = () {
-            showMaterialNumberPicker(
-                context: context,
-                title: 'Pick Timer',
-                minNumber: 1,
-                maxNumber: 59,
-                selectedNumber: 1,
-                onChanged: (value) => setState(() => times[place] = value));
-          },
-        style: style,
+        text: null,
+        children: active[place]
+            ? [
+                TextSpan(
+                    text: times[place].toString() + ' min',
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        showMaterialNumberPicker(
+                          context: context,
+                          title: 'Pick Timer',
+                          maxNumber: 59,
+                          minNumber: 0,
+                          selectedNumber: 0,
+                          onChanged: (value) =>
+                              setState(() => times[place] = value),
+                        );
+                      },
+                    style: style),
+              ]
+            : [TextSpan(text: 'No alarm', style: style)],
       ),
+    );
+  }
+
+  Widget createActiveButton(place) {
+    return IconButton(
+      icon: active[place] ? activeIcon : unactiveIcon,
+      onPressed: () {
+        try {
+          setState(() {
+            active[place] = !active[place];
+          });
+        } catch (e) {
+          print(e);
+        }
+      },
     );
   }
 
