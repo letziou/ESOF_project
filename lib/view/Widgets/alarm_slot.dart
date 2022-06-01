@@ -4,18 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_material_pickers/flutter_material_pickers.dart';
 import 'package:uni/view/Widgets/row_container.dart';
 
-class AlarmSlot extends StatelessWidget {
+class AlarmSlot extends StatefulWidget {
   final String subject;
   final String rooms;
   final String begin;
   final String typeClass;
-  final int alarmBase = 10;
-  final Icon unactiveIcon =
-      Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
-  final Icon activeIcon =
-      Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
-  final Icon notify =
-      Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
+  var time;
 
   AlarmSlot({
     Key key,
@@ -23,7 +17,29 @@ class AlarmSlot extends StatelessWidget {
     @required this.typeClass,
     @required this.rooms,
     @required this.begin,
+    @required this.time,
   }) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => AlarmSlotState(
+      this.subject, this.rooms, this.begin, this.typeClass, this.time);
+}
+
+class AlarmSlotState extends State<AlarmSlot> {
+  final String subject;
+  final String rooms;
+  final String begin;
+  final String typeClass;
+  var time;
+  final Icon unactiveIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
+  final Icon activeIcon =
+      Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
+  final Icon notify =
+      Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
+
+  AlarmSlotState(
+      this.subject, this.rooms, this.begin, this.typeClass, this.time);
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +87,7 @@ class AlarmSlot extends StatelessWidget {
           ),
         ],
       ),
-      createTimePicker(context, alarmBase,
+      createTimePicker(context,
           Theme.of(context).textTheme.headline4.apply(fontSizeDelta: 5)),
       createScheduleSlotPrimInfoColumn(roomTextField)
     ];
@@ -85,10 +101,10 @@ class AlarmSlot extends StatelessWidget {
     );
   }
 
-  Widget createTimePicker(context, alarm, style) {
+  Widget createTimePicker(context, style) {
     return RichText(
       text: TextSpan(
-        text: alarm.toString() + ' mins',
+        text: time.toString() + ' mins',
         recognizer: TapGestureRecognizer()
           ..onTap = () {
             showMaterialNumberPicker(
@@ -97,7 +113,7 @@ class AlarmSlot extends StatelessWidget {
                 minNumber: 1,
                 maxNumber: 59,
                 selectedNumber: 1,
-                onChanged: (value) => alarm = value);
+                onChanged: (value) => setState(() => time = value));
           },
         style: style,
       ),
