@@ -38,8 +38,8 @@ class AlarmPageViewState extends State<AlarmPageView> {
   final RequestStatus scheduleStatus;
   final TabController tabController;
   final ScrollController scrollViewController;
-  final List<int> times = <int>[];
-  final List<bool> active = <bool>[];
+  final List<int> times = List.filled(99, 10);
+  final List<bool> active = List.filled(99, false);
 
   Icon unactiveIcon =
       Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
@@ -85,8 +85,6 @@ class AlarmPageViewState extends State<AlarmPageView> {
         width: queryData.size.width * 1 / 3,
         child: Tab(key: Key('schedule-page-tab-$i'), text: daysOfTheWeek[i]),
       ));
-      times.add(10);
-      active.add(false);
     }
     return tabs;
   }
@@ -100,7 +98,7 @@ class AlarmPageViewState extends State<AlarmPageView> {
   }
 
   /// Returns a list of widgets for the rows with a singular class info.
-  List<Widget> createScheduleRows(lectures, BuildContext context) {
+  List<Widget> createScheduleRows(lectures, BuildContext context, day) {
     final List<Widget> scheduleContent = <Widget>[];
     for (int i = 0; i < lectures.length; i++) {
       final Lecture lecture = lectures[i];
@@ -110,7 +108,7 @@ class AlarmPageViewState extends State<AlarmPageView> {
         lecture.room,
         lecture.startTime,
         lecture.typeClass,
-        i,
+        i + day * 10,
       ));
     }
     return scheduleContent;
@@ -123,7 +121,7 @@ class AlarmPageViewState extends State<AlarmPageView> {
           key: Key('schedule-page-day-column-$day'),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: createScheduleRows(dayContent, context),
+            children: createScheduleRows(dayContent, context, day),
           ));
     }
 
