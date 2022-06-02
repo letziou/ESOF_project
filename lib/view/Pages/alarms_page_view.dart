@@ -41,12 +41,13 @@ class AlarmPageViewState extends State<AlarmPageView> {
   final List<int> times = List.filled(99, 10);
   final List<bool> active = List.filled(99, false);
 
-  Icon unactiveIcon =
+  final Icon unactiveIcon =
       Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
-  Icon activeIcon =
+  final Icon activeIcon =
       Icon(Icons.notifications, color: Color.fromARGB(255, 110, 33, 14));
-  Icon notify = Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
-  Icon alarm = Icon(Icons.alarm);
+  final Icon notify =
+      Icon(Icons.warning, color: Color.fromARGB(255, 110, 33, 14));
+  final Icon alarm = Icon(Icons.alarm);
 
   AlarmPageViewState(this.tabController, this.daysOfTheWeek, this.aggLectures,
       this.scheduleStatus, this.scrollViewController);
@@ -72,7 +73,12 @@ class AlarmPageViewState extends State<AlarmPageView> {
           child: TabBarView(
         controller: tabController,
         children: createSchedule(context),
-      ))
+      )),
+      Align(
+        alignment: Alignment.bottomRight,
+        child: createAllTimePicker(context,
+            Theme.of(context).textTheme.headline3.apply(fontSizeDelta: -2)),
+      )
     ]);
   }
 
@@ -176,10 +182,6 @@ class AlarmPageViewState extends State<AlarmPageView> {
         ' (' + typeClass + ')',
         Theme.of(context).textTheme.headline4.apply(fontSizeDelta: -4),
         TextAlign.left);
-    final roomTextField = createTextField(
-        rooms,
-        Theme.of(context).textTheme.headline4.apply(fontSizeDelta: -4),
-        TextAlign.center);
     final alarmTextPicker = createTimePicker(context,
         Theme.of(context).textTheme.headline4.apply(fontSizeDelta: 5), place);
     return [
@@ -230,6 +232,24 @@ class AlarmPageViewState extends State<AlarmPageView> {
               ]
             : [TextSpan(text: 'No alarm', style: style)],
       ),
+    );
+  }
+
+  Widget createAllTimePicker(context, style) {
+    return IconButton(
+      icon: alarm,
+      tooltip: 'change time',
+      onPressed: () {
+        showMaterialNumberPicker(
+          context: context,
+          title: 'Pick Timer',
+          maxNumber: 59,
+          minNumber: 0,
+          selectedNumber: 0,
+          onChanged: (value) =>
+              setState(() => times.fillRange(0, times.length, value)),
+        );
+      },
     );
   }
 
