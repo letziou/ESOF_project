@@ -164,6 +164,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "dbus",
+      "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/dbus-0.7.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "email_validator",
       "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/email_validator-1.0.6",
       "packageUri": "lib/",
@@ -232,6 +238,24 @@
     {
       "name": "flutter_launcher_icons",
       "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.9.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_local_notifications",
+      "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-9.5.3+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_local_notifications_linux",
+      "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications_linux-0.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_local_notifications_platform_interface",
+      "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications_platform_interface-5.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -776,6 +800,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "timezone",
+      "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/timezone-0.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "toast",
       "rootUri": "file:///home/username/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/toast-0.1.5",
       "packageUri": "lib/",
@@ -914,7 +944,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2022-05-30T19:06:51.323566Z",
+  "generated": "2022-06-02T10:21:25.329775Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

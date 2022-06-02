@@ -4,6 +4,7 @@ import 'package:uni/model/app_state.dart';
 import 'package:uni/model/entities/lecture.dart';
 import 'package:flutter/material.dart';
 import 'package:uni/view/Widgets/page_title.dart';
+import 'package:uni/controller/alarm_notification.dart';
 import 'package:uni/view/Widgets/request_dependent_widget_builder.dart';
 import 'package:uni/view/Widgets/row_container.dart';
 
