@@ -177,11 +177,11 @@ class AlarmPageViewState extends State<AlarmPageView> {
       String rooms, String begin, String typeClass, int place) {
     final subjectTextField = createTextField(
         subject,
-        Theme.of(context).textTheme.headline3.apply(fontSizeDelta: -2),
+        Theme.of(context).textTheme.headline3.apply(fontSizeDelta: -1),
         TextAlign.left);
     final typeClassTextField = createTextField(
         ' (' + typeClass + ')',
-        Theme.of(context).textTheme.headline4.apply(fontSizeDelta: -4),
+        Theme.of(context).textTheme.headline4.apply(fontSizeDelta: -1),
         TextAlign.left);
     final alarmTextPicker = createTimePicker(context,
         Theme.of(context).textTheme.headline4.apply(fontSizeDelta: 5), place);
@@ -197,7 +197,8 @@ class AlarmPageViewState extends State<AlarmPageView> {
         ],
       ),
       alarmTextPicker,
-      createScheduleSlotPrimInfoColumn(createActiveButton(place))
+      createScheduleSlotPrimInfoColumn(
+          createNotification(subject, place), createActiveButton(place))
     ];
   }
 
@@ -269,7 +270,28 @@ class AlarmPageViewState extends State<AlarmPageView> {
     );
   }
 
-  Widget createScheduleSlotPrimInfoColumn(elements) {
-    return Container(child: elements);
+  Widget createNotification(subject, place) {
+    return IconButton(
+      icon: notify,
+      onPressed: () {
+        if (times[place] != 0) {
+          NotificationService().showNotification(1, subject,
+              'Starting in ' + times[place].toString() + ' minutes', 1);
+          NotificationService().showNotification(
+              1,
+              subject,
+              'Your class is about to start in ' + times[place].toString(),
+              times[place]);
+        } else {
+          NotificationService().showNotification(1, subject, 'No time set', 1);
+        }
+      },
+    );
+  }
+
+  Widget createScheduleSlotPrimInfoColumn(elements, Widget createActiveButton) {
+    return Row(
+      children: [elements, createActiveButton],
+    );
   }
 }

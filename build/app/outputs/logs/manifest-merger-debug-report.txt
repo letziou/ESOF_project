@@ -3,6 +3,8 @@ application
 INJECTED from /home/username/2aulas/2sem/ES/2LEIC13T1/android/app/src/main/AndroidManifest.xml:8:5-32:19
 MERGED from [:sentry_flutter] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sentry_flutter/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-16:19
 MERGED from [:sentry_flutter] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sentry_flutter/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-16:19
+MERGED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-26:19
+MERGED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-26:19
 MERGED from [:url_launcher_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [:url_launcher_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [androidx.window:window:1.0.0-beta04] /home/username/.gradle/caches/transforms-2/files-2.1/83cb8bbc532cffa14556003fd4bbf50b/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
@@ -15,6 +17,8 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/username/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/username/.gradle/caches/transforms-2/files-2.1/fc1bac4f07ec655a6ddc80cf36765802/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/username/.gradle/caches/transforms-2/files-2.1/f164728df7d11df692e020c734dcc4bf/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/username/.gradle/caches/transforms-2/files-2.1/f164728df7d11df692e020c734dcc4bf/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /home/username/.gradle/caches/transforms-2/files-2.1/69bb08e4fa738a9a1aa40e214bc8a580/jetified-threetenabp-1.2.3/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /home/username/.gradle/caches/transforms-2/files-2.1/69bb08e4fa738a9a1aa40e214bc8a580/jetified-threetenabp-1.2.3/AndroidManifest.xml:7:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] /home/username/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/AndroidManifest.xml:24:18-86
 	android:name
@@ -32,11 +36,13 @@ MERGED from [:connectivity] /home/username/2aulas/2sem/ES/2LEIC13T1/build/connec
 MERGED from [:sqflite] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:sentry_flutter] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sentry_flutter/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-18:12
 MERGED from [:package_info_plus] /home/username/2aulas/2sem/ES/2LEIC13T1/build/package_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-28:12
 MERGED from [:url_launcher_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-14:12
 MERGED from [:path_provider_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:add_2_calendar] /home/username/2aulas/2sem/ES/2LEIC13T1/build/add_2_calendar/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /home/username/.gradle/caches/transforms-2/files-2.1/3ed8238888cf9e5ec09d05162acf7115/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /home/username/.gradle/caches/transforms-2/files-2.1/83cb8bbc532cffa14556003fd4bbf50b/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.media:media:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/e6d31edbc5fe43f5fafd3f98903596f4/media-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/9cb15f0f52013637f26f91d838556281/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/username/.gradle/caches/transforms-2/files-2.1/cd3b025ebed0e2000b772f8ad5ed2e82/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /home/username/.gradle/caches/transforms-2/files-2.1/953c66f515b38dc426cbc7b29d39ea0e/loader-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -55,6 +61,7 @@ MERGED from [androidx.tracing:tracing:1.0.0] /home/username/.gradle/caches/trans
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/username/.gradle/caches/transforms-2/files-2.1/cb80ce9a9488350cc6c66919d81c55cb/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/username/.gradle/caches/transforms-2/files-2.1/f164728df7d11df692e020c734dcc4bf/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/1a4e6a435622ed363027a1c70f884d19/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /home/username/.gradle/caches/transforms-2/files-2.1/69bb08e4fa738a9a1aa40e214bc8a580/jetified-threetenabp-1.2.3/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/c8ae9162f8eaebf950e6bffe8f223cc9/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /home/username/2aulas/2sem/ES/2LEIC13T1/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /home/username/2aulas/2sem/ES/2LEIC13T1/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -107,6 +114,8 @@ MERGED from [:sentry_flutter] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sent
 MERGED from [:sentry_flutter] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sentry_flutter/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-8:41
 MERGED from [:package_info_plus] /home/username/2aulas/2sem/ES/2LEIC13T1/build/package_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:package_info_plus] /home/username/2aulas/2sem/ES/2LEIC13T1/build/package_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
@@ -117,6 +126,8 @@ MERGED from [androidx.window:window-java:1.0.0-beta04] /home/username/.gradle/ca
 MERGED from [androidx.window:window-java:1.0.0-beta04] /home/username/.gradle/caches/transforms-2/files-2.1/3ed8238888cf9e5ec09d05162acf7115/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] /home/username/.gradle/caches/transforms-2/files-2.1/83cb8bbc532cffa14556003fd4bbf50b/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] /home/username/.gradle/caches/transforms-2/files-2.1/83cb8bbc532cffa14556003fd4bbf50b/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/e6d31edbc5fe43f5fafd3f98903596f4/media-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/e6d31edbc5fe43f5fafd3f98903596f4/media-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/9cb15f0f52013637f26f91d838556281/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/9cb15f0f52013637f26f91d838556281/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/username/.gradle/caches/transforms-2/files-2.1/cd3b025ebed0e2000b772f8ad5ed2e82/viewpager-1.0.0/AndroidManifest.xml:20:5-44
@@ -153,6 +164,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/usern
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/username/.gradle/caches/transforms-2/files-2.1/f164728df7d11df692e020c734dcc4bf/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/1a4e6a435622ed363027a1c70f884d19/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/1a4e6a435622ed363027a1c70f884d19/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /home/username/.gradle/caches/transforms-2/files-2.1/69bb08e4fa738a9a1aa40e214bc8a580/jetified-threetenabp-1.2.3/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /home/username/.gradle/caches/transforms-2/files-2.1/69bb08e4fa738a9a1aa40e214bc8a580/jetified-threetenabp-1.2.3/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/c8ae9162f8eaebf950e6bffe8f223cc9/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/username/.gradle/caches/transforms-2/files-2.1/c8ae9162f8eaebf950e6bffe8f223cc9/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 INJECTED from /home/username/2aulas/2sem/ES/2LEIC13T1/android/app/src/debug/AndroidManifest.xml
@@ -200,6 +213,52 @@ REJECTED from [io.sentry:sentry-android-core:5.0.1] /home/username/.gradle/cache
 		ADDED from [:sentry_flutter] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sentry_flutter/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-37
 	android:name
 		ADDED from [:sentry_flutter] /home/username/2aulas/2sem/ES/2LEIC13T1/build/sentry_flutter/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-69
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-63
+uses-permission#android.permission.USE_FULL_SCREEN_INTENT
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-76
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-15:40
+	android:exported
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-97
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-25:20
+	android:exported
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-101
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-24:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-79
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-84
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:25-81
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /home/username/2aulas/2sem/ES/2LEIC13T1/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:25-79
 activity#io.flutter.plugins.urllauncher.WebViewActivity
 ADDED from [:url_launcher_android] /home/username/2aulas/2sem/ES/2LEIC13T1/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-11:74
 	android:exported
