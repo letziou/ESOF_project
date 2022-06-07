@@ -22,6 +22,7 @@ import 'package:uni/view/Widgets/page_transition.dart';
 import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
 
+
 import 'controller/on_start_up.dart';
 import 'model/alarms_page_model.dart';
 import 'model/schedule_page_model.dart';
@@ -116,7 +117,8 @@ class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 60),
+    //quick fix for the resets that were happening
+    Timer.periodic(Duration(hours: 60),
         (Timer t) => state.dispatch(SetCurrentTimeAction(DateTime.now())));
   }
 }

@@ -7,6 +7,8 @@ import 'package:uni/view/Widgets/page_title.dart';
 import 'package:uni/controller/alarm_notification.dart';
 import 'package:uni/view/Widgets/request_dependent_widget_builder.dart';
 import 'package:uni/view/Widgets/row_container.dart';
+import 'package:gsheets/gsheets.dart';
+import 'package:uni/utils/constants.dart' as Constants;
 
 /// Manages the 'schedule' sections of the app
 class AlarmPageView extends StatefulWidget {
@@ -24,16 +26,18 @@ class AlarmPageView extends StatefulWidget {
   final TabController tabController;
   final ScrollController scrollViewController;
 
+  get file => null;
+
   @override
   State<StatefulWidget> createState() => AlarmPageViewState(
       this.tabController,
       this.daysOfTheWeek,
       this.aggLectures,
       this.scheduleStatus,
-      this.scrollViewController);
+      this.scrollViewController,);
 }
 
-class AlarmPageViewState extends State<AlarmPageView> {
+class AlarmPageViewState extends State<AlarmPageView>  {
   final List<String> daysOfTheWeek;
   final List<List<Lecture>> aggLectures;
   final RequestStatus scheduleStatus;
@@ -41,6 +45,12 @@ class AlarmPageViewState extends State<AlarmPageView> {
   final ScrollController scrollViewController;
   final List<int> times = List.filled(99, 10);
   final List<bool> active = List.filled(99, false);
+  // init GSheets
+  //final gsheets = GSheets(Constants._credentials);
+  // fetch spreadsheet by its id
+  //final ss = await gsheets.spreadsheet(Constants._spreadsheetId);
+  // get worksheet by its title
+  //final sheet = await ss.worksheetByTitle('products');
 
   final Icon unactiveIcon =
       Icon(Icons.notifications, color: Color.fromARGB(50, 110, 33, 14));
@@ -52,6 +62,9 @@ class AlarmPageViewState extends State<AlarmPageView> {
 
   AlarmPageViewState(this.tabController, this.daysOfTheWeek, this.aggLectures,
       this.scheduleStatus, this.scrollViewController);
+
+  @override
+
 
   @override
   Widget build(BuildContext context) {
@@ -224,11 +237,12 @@ class AlarmPageViewState extends State<AlarmPageView> {
                           context: context,
                           title: 'Pick Timer',
                           maxNumber: 59,
-                          minNumber: 0,
-                          selectedNumber: 0,
+                          minNumber: 1,
+                          selectedNumber: 1,
                           onChanged: (value) =>
                               setState(() => times[place] = value),
                         );
+                        return widget.file.writeListTimes(times);
                       },
                     style: style),
               ]
@@ -263,6 +277,7 @@ class AlarmPageViewState extends State<AlarmPageView> {
           setState(() {
             active[place] = !active[place];
           });
+
         } catch (e) {
           print(e);
         }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/username/2aulas/2sem/ES/2LEIC13T1/build/shared_preferences_android/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
+            "outputFile": "/Users/rafaelmorgado/Desktop/Prog/ES/2LEIC13T1/build/shared_preferences_android/intermediates/res/merged/debug/values-kn/values-kn.xml",
             "map": [
                 {
-                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values-kn/values-kn.xml",
+                    "source": "/Users/rafaelmorgado/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values-kn/values-kn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/home/username/2aulas/2sem/ES/2LEIC13T1/build/shared_preferences_android/intermediates/res/merged/debug/values-kn/values-kn.xml",
+            "outputFile": "/Users/rafaelmorgado/Desktop/Prog/ES/2LEIC13T1/build/shared_preferences_android/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml",
             "map": [
                 {
-                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values-kn/values-kn.xml",
+                    "source": "/Users/rafaelmorgado/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values-kn/values-kn.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
