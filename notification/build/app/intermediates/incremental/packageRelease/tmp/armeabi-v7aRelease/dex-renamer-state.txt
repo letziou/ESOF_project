@@ -1,0 +1,4 @@
+#Fri May 27 18:37:01 WEST 2022
+base.0=/Users/rafaelmorgado/Desktop/Prog/ES/2LEIC13T1/notification/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
