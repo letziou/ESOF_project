@@ -16,13 +16,6 @@
             </list>
           </value>
         </entry>
-        <entry key="adaptive_theme">
-          <value>
-            <list>
-              <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/adaptive_theme-2.3.1/lib" />
-            </list>
-          </value>
-        </entry>
         <entry key="add_2_calendar">
           <value>
             <list>
@@ -195,7 +188,6 @@
           <value>
             <list>
               <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.5/lib" />
-              <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4/lib" />
             </list>
           </value>
         </entry>
@@ -252,7 +244,6 @@
           <value>
             <list>
               <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-4.6.1/lib" />
-              <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-4.5.1/lib" />
             </list>
           </value>
         </entry>
@@ -295,13 +286,6 @@
           <value>
             <list>
               <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.9.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="flutter_lints">
-          <value>
-            <list>
-              <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib" />
             </list>
           </value>
         </entry>
@@ -477,13 +461,6 @@
           <value>
             <list>
               <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="lints">
-          <value>
-            <list>
-              <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -666,7 +643,6 @@
           <value>
             <list>
               <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7/lib" />
-              <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.6/lib" />
             </list>
           </value>
         </entry>
@@ -688,7 +664,6 @@
           <value>
             <list>
               <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.7/lib" />
-              <option value="/usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.6/lib" />
             </list>
           </value>
         </entry>
@@ -1152,7 +1127,6 @@
     <CLASSES>
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/_discoveryapis_commons-1.0.3/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-31.0.0/lib" />
-      <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/adaptive_theme-2.3.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/add_2_calendar-1.4.0/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-2.8.0/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.3.0/lib" />
@@ -1177,7 +1151,6 @@
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/coverage-1.0.3/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.2/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.17.2/lib" />
-      <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.5/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/dart_style-2.2.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/dbus-0.7.3/lib" />
@@ -1186,14 +1159,12 @@
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-1.2.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2/lib" />
-      <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-4.5.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-4.6.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/fixnum-1.0.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_blurhash-0.7.0/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-3.3.0/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_colorpicker-1.0.3/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_launcher_icons-0.9.3/lib" />
-      <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-9.5.3+1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications_linux-0.4.2/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications_platform_interface-5.0.0/lib" />
@@ -1217,7 +1188,6 @@
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/io-1.0.3/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3/lib" />
-      <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/logger-0.9.4/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.0.2/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/markdown-5.0.0/lib" />
@@ -1243,11 +1213,9 @@
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.11/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.14/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.9/lib" />
-      <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.6/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.6/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.4/lib" />
-      <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.6/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.7/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.11.1/lib" />
       <root url="file:///usr/local/Caskroom/flutter/2.10.3/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-4.4.0/lib" />
