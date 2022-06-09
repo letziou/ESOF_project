@@ -1,5 +1,0 @@
--keep class android.app.Application { <init>(); }
--keep class androidx.core.app.CoreComponentFactory { <init>(); }
--keep class com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver { <init>(); }
--keep class com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver { <init>(); }
--keep class com.example.notification.MainActivity { <init>(); }

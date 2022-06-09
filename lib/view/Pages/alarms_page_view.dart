@@ -7,8 +7,6 @@ import 'package:uni/view/Widgets/page_title.dart';
 import 'package:uni/controller/alarm_notification.dart';
 import 'package:uni/view/Widgets/request_dependent_widget_builder.dart';
 import 'package:uni/view/Widgets/row_container.dart';
-import 'package:gsheets/gsheets.dart';
-import 'package:uni/utils/constants.dart' as Constants;
 
 /// Manages the 'schedule' sections of the app
 class AlarmPageView extends StatefulWidget {
