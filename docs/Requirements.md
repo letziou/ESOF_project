@@ -118,7 +118,7 @@ In order to document the high-level logical structure of the code, we have divid
 
 
 <p align="center" justify="center">
- <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/physical%20model%20final%203.png">
+ <img src="https://github.com/LEIC-ES-2021-22/2LEIC13T1/blob/main/images/physiscal%20fixed.png">
 </p>
 
 <br><br>
