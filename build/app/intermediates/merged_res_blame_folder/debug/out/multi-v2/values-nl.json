@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/rafaelmorgado/Desktop/Prog/ES/2LEIC13T1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml",
+            "outputFile": "/home/username/2aulas/2sem/ES/2LEIC13T1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml",
             "map": [
                 {
-                    "source": "/Users/rafaelmorgado/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values-nl/values-nl.xml",
+                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values-nl/values-nl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/rafaelmorgado/Desktop/Prog/ES/2LEIC13T1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/username/2aulas/2sem/ES/2LEIC13T1/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/rafaelmorgado/.gradle/caches/transforms-2/files-2.1/83cb8bbc532cffa14556003fd4bbf50b/jetified-window-1.0.0-beta04/res/values/values.xml",
+                    "source": "/home/username/2aulas/2sem/ES/2LEIC13T1/android/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "46",
+                        "endOffsets": "97"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "976",
+                        "endColumns": "46",
+                        "endOffsets": "1018"
+                    }
+                },
+                {
+                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/83cb8bbc532cffa14556003fd4bbf50b/jetified-window-1.0.0-beta04/res/values/values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "/Users/rafaelmorgado/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values/values.xml",
+                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/616b51fd43b7e50cf53c169aeb75cc32/core-1.6.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,89,90,94,95,96,97,104,111,159,191,228",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +59,7 @@
                     }
                 },
                 {
-                    "source": "/Users/rafaelmorgado/Desktop/Prog/ES/2LEIC13T1/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/username/2aulas/2sem/ES/2LEIC13T1/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -61,7 +78,7 @@
                     }
                 },
                 {
-                    "source": "/Users/rafaelmorgado/.gradle/caches/transforms-2/files-2.1/e6d31edbc5fe43f5fafd3f98903596f4/media-1.1.0/res/values/values.xml",
+                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/e6d31edbc5fe43f5fafd3f98903596f4/media-1.1.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -75,23 +92,6 @@
                         "startOffsets": "743,832,903,2489,2542,2595,2648,5813,6629,6805,6927,7189,7384",
                         "endColumns": "88,70,72,52,52,52,52,59,65,121,60,65,66",
                         "endOffsets": "827,898,971,2537,2590,2643,2696,5868,6690,6922,6983,7250,7446"
-                    }
-                },
-                {
-                    "source": "/Users/rafaelmorgado/Desktop/Prog/ES/2LEIC13T1/android/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "46",
-                        "endOffsets": "97"
-                    },
-                    "to": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "976",
-                        "endColumns": "46",
-                        "endOffsets": "1018"
                     }
                 }
             ]
